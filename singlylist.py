@@ -94,20 +94,26 @@ class SLL:
                         break
                     temp = temp.next
 # iterator  given iterable
+
     def __iter__(self):
         return SSLIterable(self.head)
 # create SSL iterable
+
+
 class SSLIterable:
-    def __init__(self,head):
-        self.curr=head
+    def __init__(self, head):
+        self.curr = head
+
     def __iter__(self):
         return self
+
     def __next__(self):
         if not self.curr:
             raise StopIteration
-        data=self.curr.item
-        self.curr=self.curr.next 
+        data = self.curr.item
+        self.curr = self.curr.next
         return data
+
 
 # driver code
 mylist = SLL()
